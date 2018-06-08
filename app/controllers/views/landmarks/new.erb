@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/landmarks" method="post">
+      <p>Enter a new landmark name:</p><input type="text" id="landmark_name" name="landmark[name]">
+      <p>Enter a year completed:</p><input type="text" name="landmark[year_completed]" id="landmark_year_completed">
+      <p>Select from the list of figures: </p>
+      <% @figures.each do |figure| %>
+      <input type="radio" name="figure" value="<%= figure.id%>"><%= figure.name %></input>
+      <% end %>
+      <p>Or, create a new figure: </p>
+      <input type="text" name="figure_name" value="">
+      <input type="submit" name="" id="Create New Landmark" value="Create New Landmark">
+    </form>
+  </body>
+</html>
