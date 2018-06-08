@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Figure Name:</p>
+    <%= @figure.name %>
+    <% @landmarks.each do |landmark| %>
+    <p>Landmark Name:</p>
+    <%= landmark.name%>
+    <% end %>
+    <% @titles.each do |title| %>
+    <p>Title Name:</p>
+    <%= title.name %>
+    <% end %>
+
+    <p><a href="/figures/<%= @figure.id %>/edit">Edit This Figure</a></p>
+  </body>
+</html>
