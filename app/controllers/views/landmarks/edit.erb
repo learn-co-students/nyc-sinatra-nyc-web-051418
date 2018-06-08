@@ -11,7 +11,7 @@
       <p>Enter a year completed:</p><input type="text" name="landmark[year_completed]" id="year_completed" value="<%= @landmark.year_completed %>">
       <p>Select from the list of figures: </p>
       <% @figures.each do |figure| %>
-      <input type="radio" name="figure" value="<%= figure.id%>"><%= figure.name %></input>
+      <input type="radio" name="figure" value="<%= figure.id%>" '<%= "checked" if @landmark.figures.include?(figure)%>'><%= figure.name %></input>
       <% end %>
       <p>Or, create a new figure: </p>
       <input type="text" name="figure_name" value="">
